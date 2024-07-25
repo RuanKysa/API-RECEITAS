@@ -8,7 +8,7 @@ export default function LayoutRouter({children}){
     return (
         <>
         <Head>
-            <link rel="shortcut icon" href="/images/favicon.ico" />
+            <link rel="shortcut icon" href="/images/Favicon.ico" />
             <title>Bueno Tech</title>
         </Head>
         <Navbar />
