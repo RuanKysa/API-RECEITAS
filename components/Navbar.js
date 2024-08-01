@@ -22,16 +22,21 @@ export default function Navbar() {
                 </li>
                 <li>
                     <Link legacyBehavior href="/about">
+                        <a>Tutorial</a>
+                    </Link>
+                </li>
+                <li>
+                    <Link legacyBehavior href="/store">
                         <a>Store</a>
                     </Link>
                 </li>
                 <li>
-                    <Link legacyBehavior href="/about">
+                    <Link legacyBehavior target="blank" href="https://w.app/BuenoTech" >
                         <a>Contact</a>
                     </Link>
                 </li>
                 <li>
-                    <Link legacyBehavior href="/about">
+                    <Link legacyBehavior href="/profile">
                         <a>Profile</a>
                     </Link>
                 </li>

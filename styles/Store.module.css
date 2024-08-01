@@ -1,0 +1,16 @@
+/* styles/Card.module.css */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+.grid {
+    display: grid;
+    gap: 16px;
+    grid-template-columns: repeat(3, 1fr); /* Três colunas de tamanhos iguais */
+    max-width: 1200px; /* Defina a largura máxima do grid */
+    width: 100%;
+    justify-content: center; /* Centraliza o grid horizontalmente */
+}
