@@ -14,7 +14,7 @@ export default function Home({ receitas }) {
 }
 
 export async function getStaticProps() {
-    const res = await fetch('http://localhost:3000/api/receitas');
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/receitas`);
     const receitas = await res.json();
 
     return {
@@ -23,3 +23,4 @@ export async function getStaticProps() {
         },
     };
 }
+
