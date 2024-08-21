@@ -9,7 +9,7 @@ export default function LayoutRouter({children}){
         <>
         <Head>
             <link rel="shortcut icon" href="/images/Favicon.ico" />
-            <title>Bueno Tech</title>
+            <title>R$R RECEITAS</title>
         </Head>
         <Navbar />
         <main className="main-container">{children}</main>

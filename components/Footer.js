@@ -3,7 +3,7 @@ import styles from "../styles/Footer.module.css"
 export default function Footer(){
     return(
         <footer className={styles.footer}>
-            <p> <span>Bueno Tech</span> &copy; 2024 </p>
+            <p> <span>R&R RECEITAS</span> &copy; 2024 </p>
         </footer>
     )
 }

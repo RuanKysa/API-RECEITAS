@@ -1,12 +1,12 @@
 import styles from "@/styles/Store.module.css";
 import Card from "../components/Card";
 
-export default function Home({ products }) {
+export default function Home({ receitas }) {
     return (
         <div className={styles.container}>
             <div className={styles.grid}>
-                {products.map((product) => (
-                    <Card key={product.id} product={product} />
+                {receitas.map((receita) => (
+                    <Card key={receita.id} product={receita} />
                 ))}
             </div>
         </div>
@@ -14,12 +14,12 @@ export default function Home({ products }) {
 }
 
 export async function getStaticProps() {
-    const res = await fetch('http://localhost:3000/api/products');
-    const products = await res.json();
+    const res = await fetch('http://localhost:3000/api/receitas');
+    const receitas = await res.json();
 
     return {
         props: {
-            products,
+            receitas,
         },
     };
 }

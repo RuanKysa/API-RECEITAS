@@ -1,16 +1,46 @@
-/* styles/Card.module.css */
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2em;
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden; 
 }
 
 .grid {
     display: grid;
     gap: 16px;
-    grid-template-columns: repeat(3, 1fr); /* Três colunas de tamanhos iguais */
-    max-width: 1200px; /* Defina a largura máxima do grid */
+    grid-template-columns: repeat(3, 1fr); 
+    max-width: 1200px; 
     width: 100%;
-    justify-content: center; /* Centraliza o grid horizontalmente */
+    justify-content: center; 
+}
+
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .grid {
+        grid-template-columns: 1fr; 
+        gap: 8px; 
+    }
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        justify-content: center; 
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        justify-content: center; 
+        padding: 1em; 
+    }
 }

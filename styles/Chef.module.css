@@ -1,0 +1,168 @@
+/* Centralizar o conteúdo */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+/* Estilo do formulário */
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+}
+
+/* Estilo do card */
+.card {
+    display: flex;
+    flex-direction: column;
+    padding: 2em 1.5em;
+    width: 100%; 
+    max-width: 600px; 
+    border-radius: 12px;
+    border: 1px solid #d4af37; /* Cor dourada para um toque sofisticado */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.19); /* Sombras sutis */
+    background-color: #f9f9f9; /* Fundo claro para contraste com o conteúdo */
+    color: #333;
+}
+
+/* Estilo dos itens do formulário */
+.itens {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1em;
+}
+
+.itens li {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5em;
+}
+
+/* Estilo das labels */
+.itens label {
+    font-size: 1.2em;
+    margin-bottom: 0.5em;
+    color: #555;
+}
+
+/* Estilo dos inputs */
+.itens input {
+    height: 2.5em;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 1px solid #ccc; /* Borda sutil */
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Estilo do botão principal */
+.card .btn {
+    text-decoration: none;
+    background: #d4af37; /* Cor dourada */
+    color: #fff;
+    padding: 0.8em 1.5em;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
+    cursor: pointer;
+    align-self: center;
+}
+
+.card .btn:hover {
+    background: #b8860b; /* Tom mais escuro para o hover */
+    color: #fff;
+}
+
+/* Estilo da pré-visualização de imagem */
+.imagemPreview {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    max-height: 200px;
+    border-radius: 8px;
+    border: 2px solid #d4af37; /* Borda dourada */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2);
+    margin-top: 1em;
+}
+
+/* Container dos ingredientes */
+.ingredientesContainer {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1em;
+}
+
+/* Input de ingredientes */
+.ingredientesInput {
+    flex: 1;
+    padding: 0.5em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    margin-right: 1em;
+}
+
+/* Lista de ingredientes */
+.ingredientesList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.ingredientesList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0.5em 0;
+}
+
+/* Botões de ações dos ingredientes */
+.ingredientesList button {
+    background-color: #e33333;
+    color: white;
+    border: none;
+    padding: 0.3em 0.6em;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.ingredientesList button:hover {
+    background-color: darkred;
+}
+
+/* Estilo dos inputs com erro */
+.errorInput {
+    border: 2px solid red;
+    background-color: #ffe6e6;
+}
+
+.errorInput::placeholder {
+    color: red;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 0.3em;
+}
+
+.adicionarBtn {
+    background-color: #4CAF50; 
+    color: white; 
+    padding: 0.6em 1.2em; 
+    border: none; 
+    border-radius: 8px; 
+    font-weight: bold;
+    cursor: pointer; 
+    transition: background-color 0.3s ease; 
+    margin-top: 1em; 
+    align-self: center; 
+}
+
+.adicionarBtn:hover {
+    background-color: #45a049;
+}
