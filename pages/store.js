@@ -13,7 +13,7 @@ export default function Home({ receitas }) {
     );
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/receitas`);
     const receitas = await res.json();
 
@@ -23,6 +23,5 @@ export async function getServerSideProps() {
         },
     };
 }
-
 
 
