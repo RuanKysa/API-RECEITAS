@@ -1,7 +1,9 @@
+import fs from 'fs';
+import path from 'path';
 import styles from "@/styles/Store.module.css";
 import Card from "../components/Card";
 
-export default function Home({ receitas }) {
+export default function Store({ receitas }) {
     return (
         <div className={styles.container}>
             <div className={styles.grid}>
@@ -14,8 +16,9 @@ export default function Home({ receitas }) {
 }
 
 export async function getStaticProps() {
-    const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/receitas`);
-    const receitas = await res.json();
+    const filePath = path.join(process.cwd(), 'data', 'receitas.json');
+    const jsonData = fs.readFileSync(filePath);
+    const receitas = JSON.parse(jsonData);
 
     return {
         props: {
@@ -23,5 +26,3 @@ export async function getStaticProps() {
         },
     };
 }
-
-
