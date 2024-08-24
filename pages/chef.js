@@ -12,7 +12,7 @@ export default function Chef() {
     const [tempoCozimento, setTempoCozimento] = useState('');
     const [errors, setErrors] = useState({});
     const [notification, setNotification] = useState(null);
-    const [loading, setLoading] = useState(false); // Estado de carregamento
+    const [loading, setLoading] = useState(false); 
 
     const handleImageUpload = (event) => {
         const file = event.target.files[0];
@@ -51,12 +51,12 @@ export default function Chef() {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        setLoading(true); // Inicia o estado de carregamento
+        setLoading(true); 
 
         const formErrors = validateForm();
         if (Object.keys(formErrors).length > 0) {
             setErrors(formErrors);
-            setLoading(false); // Para o estado de carregamento
+            setLoading(false); 
             return;
         }
 
@@ -96,7 +96,7 @@ export default function Chef() {
             console.error('Erro:', error);
             alert('Erro ao adicionar receita.');
         } finally {
-            setLoading(false); // Para o estado de carregamento
+            setLoading(false); 
         }
     };
 

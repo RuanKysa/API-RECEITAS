@@ -4,6 +4,15 @@ import path from 'path';
 const receitasPath = path.resolve('.', 'data', 'receitas.json');
 const idPath = path.resolve('.', 'data', 'id.json');
 
+const ensureFileExists = (filePath, initialData = []) => {
+    if (!fs.existsSync(filePath)) {
+        fs.writeFileSync(filePath, JSON.stringify(initialData, null, 2));
+    }
+};
+
+ensureFileExists(receitasPath);
+ensureFileExists(idPath, { lastId: "0" });
+
 const getNextId = () => {
     if (fs.existsSync(idPath)) {
         const { lastId } = JSON.parse(fs.readFileSync(idPath, 'utf8'));
