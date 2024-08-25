@@ -1,25 +1,34 @@
-import fs from 'fs';
-import path from 'path';
 import styles from "../../styles/detalhe.module.css";
 
 export async function getStaticPaths() {
-    const receitasPath = path.resolve('.', 'data', 'receitas.json');
-    const receitas = JSON.parse(fs.readFileSync(receitasPath, 'utf8'));
+    try {
+        const res = await fetch('https://api-url-vy6n.onrender.com/receita');
+        if (!res.ok) throw new Error('Erro ao carregar receitas.');
+        const receitas = await res.json();
 
-    const paths = receitas.map((receita) => ({
-        params: { id: receita.id.toString() },
-    }));
+        const paths = receitas.map((receita) => ({
+            params: { id: receita.id.toString() },
+        }));
 
-    return { paths, fallback: false };
+        return { paths, fallback: false };
+    } catch (error) {
+        console.error('Erro ao buscar caminhos:', error);
+        return { paths: [], fallback: false };
+    }
 }
 
+// Função para buscar dados da receita específica
 export async function getStaticProps({ params }) {
-    const receitasPath = path.resolve('.', 'data', 'receitas.json');
-    const receitas = JSON.parse(fs.readFileSync(receitasPath, 'utf8'));
+    try {
+        const res = await fetch(`https://api-url-vy6n.onrender.com/receita/${params.id}`);
+        if (!res.ok) throw new Error('Erro ao carregar receita.');
+        const receita = await res.json();
 
-    const receita = receitas.find((r) => r.id === params.id);
-
-    return { props: { receita } };
+        return { props: { receita } };
+    } catch (error) {
+        console.error('Erro ao buscar dados da receita:', error);
+        return { props: { receita: null } };
+    }
 }
 
 export default function Detalhes({ receita }) {

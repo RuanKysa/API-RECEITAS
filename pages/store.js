@@ -1,5 +1,3 @@
-import fs from 'fs';
-import path from 'path';
 import styles from "@/styles/Store.module.css";
 import Card from "../components/Card";
 
@@ -16,13 +14,23 @@ export default function Store({ receitas }) {
 }
 
 export async function getStaticProps() {
-    const filePath = path.join(process.cwd(), 'data', 'receitas.json');
-    const jsonData = fs.readFileSync(filePath);
-    const receitas = JSON.parse(jsonData);
+    try {
+        const res = await fetch('https://api-url-vy6n.onrender.com/receita');
+        if (!res.ok) throw new Error('Erro ao carregar receitas.');
+        const receitas = await res.json();
 
-    return {
-        props: {
-            receitas,
-        },
-    };
+        return {
+            props: {
+                receitas,
+            },
+            revalidate: 10, 
+        };
+    } catch (error) {
+        console.error('Erro ao buscar dados:', error);
+        return {
+            props: {
+                receitas: [],
+            },
+        };
+    }
 }

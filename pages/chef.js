@@ -71,7 +71,7 @@ export default function Chef() {
         };
 
         try {
-            const res = await fetch('/api/receitas', {
+            const res = await fetch('https://api-url-vy6n.onrender.com/receita', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

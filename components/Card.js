@@ -14,12 +14,10 @@ export default function Card({ product }) {
                     layout="intrinsic"
                 />
             )}
-            <p className={styles.id}>#{product.id}</p>
             <h3 className={styles.title}>{product.titulo}</h3>
             <Link legacyBehavior href={`/receita/${product.id}`}>
                 <a className={styles.btn}>Detalhes da Receita</a>
             </Link>
-
         </div>
     );
-} 
+}
