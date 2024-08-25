@@ -17,7 +17,6 @@ export async function getStaticPaths() {
     }
 }
 
-// Função para buscar dados da receita específica
 export async function getStaticProps({ params }) {
     try {
         const res = await fetch(`https://api-url-vy6n.onrender.com/receita/${params.id}`);
