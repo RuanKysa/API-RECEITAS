@@ -2,20 +2,20 @@ import Link from "next/link";
 import styles from "../styles/Card.module.css";
 import Image from "next/image";
 
-export default function Card({ receita }) {
+export default function Card({ product }) {
     return (
         <div className={styles.card}>
-            {receita.imagem && (
+            {product.imagem && (
                 <Image
-                    src={receita.imagem}
+                    src={product.imagem}
                     width={120}
                     height={120}
-                    alt={receita.titulo}
+                    alt={product.titulo}
                     layout="intrinsic"
                 />
             )}
-            <h3 className={styles.title}>{receita.titulo}</h3>
-            <Link legacyBehavior href={`/receita/${receita.id}`}>
+            <h3 className={styles.title}>{product.titulo}</h3>
+            <Link legacyBehavior href={`/receita/${product.id}`}>
                 <a className={styles.btn}>Detalhes da Receita</a>
             </Link>
         </div>
