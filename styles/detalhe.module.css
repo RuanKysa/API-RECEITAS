@@ -1,79 +1,91 @@
 .container {
-    max-width: 800px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    font-family: 'Arial', sans-serif;
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #faf3e0;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    font-family: 'Georgia', serif;
     color: #333;
 }
 
-.container .title {
-    font-size: 2.5rem;
-    color: #2c3e50;
+.title {
+    font-size: 2.8rem;
+    color: #d2691e;
     text-align: center;
-    margin-bottom: 20px;
-    font-weight: 700;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-family: 'Garamond', serif;
 }
 
-.container .image {
+.image {
     width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.ingredients, 
+.preparation {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
     margin-bottom: 20px;
+    padding: 25px;
+    background-color: #fff8e7;
+    border-radius: 8px;
+    border: 1px solid #d2691e;
 }
 
-.container .ingredients,
-.container .preparation {
-    font-size: 1.1rem;
-    line-height: 1.6;
-    color: #4f4f4f;
-}
-
-.container .ingredients li {
-    margin-bottom: 10px;
+.ingredients li {
+    margin-bottom: 8px;
 }
 
 .container h3 {
-    font-size: 1.6rem;
-    color: #34495e;
-    margin-top: 20px;
+    font-size: 1.8rem;
+    color: #a0522d;
+    margin-top: 25px;
+    font-family: 'Garamond', serif;
 }
 
 .container p {
-    margin-top: 10px;
+    font-size: 1.1rem;
+    color: #444;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+.time-info {
+    margin-top: 30px;
     font-size: 1rem;
-    color: #555;
-}
-
-.container .ingredients,
-.container .preparation,
-.container p {
-    transition: all 0.3s ease-in-out;
-}
-
-.container .ingredients:hover,
-.container .preparation:hover,
-.container p:hover {
-    color: #2c3e50;
+    color: #666;
+    text-align: right;
 }
 
 @media (max-width: 768px) {
     .container {
-        padding: 15px;
+        padding: 20px;
     }
 
-    .container .title {
-        font-size: 2rem;
+    .title {
+        font-size: 2.4rem;
+    }
+
+    .image {
+        margin-bottom: 20px;
     }
 
     .container h3 {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
 
-    .container .ingredients,
-    .container .preparation {
+    .ingredients,
+    .preparation {
+        font-size: 1rem;
+    }
+
+    .container p {
         font-size: 1rem;
     }
 }

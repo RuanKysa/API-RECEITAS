@@ -39,8 +39,10 @@ export default function Detalhes({ receita }) {
             </ul>
             <h3>Modo de Preparo:</h3>
             <p className={styles.preparation}>{receita.modoPreparo}</p>
-            <p>Tempo de Preparo: {receita.tempoPreparo} minutos</p>
-            <p>Tempo de Cozimento: {receita.tempoCozimento} minutos</p>
+            <div className={styles.timeinfo}>
+                <p>Tempo de Preparo: {receita.tempoPreparo} minutos</p>
+                <p>Tempo de Cozimento: {receita.tempoCozimento} minutos</p>
+            </div>
         </div>
     );
 }

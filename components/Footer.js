@@ -1,9 +1,9 @@
 import styles from "../styles/Footer.module.css"
 
-export default function Footer(){
-    return(
+export default function Footer() {
+    return (
         <footer className={styles.footer}>
-            <p> <span>R&R RECEITAS</span> &copy; 2024 </p>
+            <p> &copy;<span> 2024 R&R RECEITAS. Todos os direitos reservados.</span></p>
         </footer>
     )
 }
